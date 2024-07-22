@@ -3,9 +3,14 @@
 
 ## v1.7.5  (master)
 
+### Update
+
+- jQuery升级至3.7.1
+
 ### Change
 
 - 现在 ``Date.prototype.formatDateTm`` 不再支持公式计算,仅支持``%y-%M-%d``或数字
+- jQuery-3.min.js重命名为jQuery.min.js 现在系统中不再包含jQuery1库，如需使用其他版本jQuery库，请自行下载引入
 
 
 ### Improvements
