@@ -9,7 +9,7 @@
   'use strict'
 
   var BJUI = {
-    version: '1.7.5-beta6',
+    version: '1.7.5-beta7',
     JSPATH: 'BJUI/',
     PLUGINPATH: 'BJUI/plugins/',
     IS_DEBUG: false,
@@ -204,7 +204,7 @@
     initLayout: function(ww) {
       var $header = $('#bjui-header')
       var $navtab = $('#bjui-navtab')
-      var iContentW = ww - (BJUI.ui.showSlidebar ? $('#bjui-sidebar').width() + 6 : 6)
+      var iContentW = ww - (BJUI.ui.showSlidebar ? ($('#bjui-sidebar').width() || 0) + 6 : 6)
       if (BJUI.layout && BJUI.layout.mode !== 'default') {
         iContentW += 6
       }
@@ -218,7 +218,7 @@
         $navtab.find('.tabsPageHeader').hide()
         $navtab.find('.tabsPageContent').css('margin-top', 0)
       } else {
-        navtabH = $navtab.find('.tabsPageHeader').height()
+        navtabH = $navtab.find('.tabsPageHeader').height() || 0
       }
 
       if (BJUI.ui.windowWidth) $('#bjui-window').width(ww)
