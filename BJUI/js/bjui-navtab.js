@@ -368,6 +368,7 @@
                   $panel.navtab('refresh')
                 }, arefre * 1000)
               }
+
               if (options.loadPageData && BJUI.ui.clientPaging && $panel.data('bjui.clientPaging')) {
                 var clientPaging = $panel.data('bjui.clientPaging')
                 if (clientPaging) {
@@ -381,6 +382,8 @@
                 $panel.data('bjui.clientPaging', clientPaging)
                 $panel.pagination('setPagingAndOrderby', $panel)
               }
+
+              $panel.trigger(BJUI.eventType.afterLoadNavtab)
             }
           })
       }

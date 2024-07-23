@@ -20,6 +20,7 @@
 - 新增left-menus模式下另一种icon配置方式
 - 新增图标
 - 优化部分布局兼容性
+- 新增`bjui.beforeLoadNavtab` 载入navtab内容后事件
 
 ### fixed
 - 修复 doLoad 方法 data参数丢失问题
